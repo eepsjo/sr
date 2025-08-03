@@ -1,0 +1,14 @@
+#!name=落雪
+#!desc=maimai 查分器
+
+# 需要添加节点
+# LX = http,proxy.maimai.lxns.net,8080
+# 启用模块时“舞萌|中二”的“我的记录”将无法使用
+# 离线同步数据使用微信访问
+# https://maimai.lxns.net/api/v0/maimai/wechat/auth
+# 或
+# https://maimai.lxns.net/api/v0/chunithm/wechat/auth
+# 来同步舞萌或中二
+
+[Rule]
+DOMAIN,tgk-wcaime.wahlap.com,LX
