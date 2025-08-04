@@ -1,5 +1,5 @@
 #!name=落雪
-#!desc=maimai 查分器
+#!desc=落雪查分器，模块使用方法见下方说明
 
 # 需要添加节点
 # LX = http,proxy.maimai.lxns.net,8080
