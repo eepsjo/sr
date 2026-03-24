@@ -1,0 +1,13 @@
+#!name=[e] bili
+#!desc=画质解锁、屏蔽热搜
+
+[Script]
+# 画质解锁
+bili4k=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/bili4k.js,script-update-interval=0
+
+[Map Local]
+# 屏蔽热搜
+^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?(.+)$ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% app.bilibili.com

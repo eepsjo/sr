@@ -1,0 +1,8 @@
+#!name=[e] ca
+#!desc=⚠把我放到最底下⚠ - 证书 - 编辑参数
+#!arguments=内容:此处粘贴有效的证书内容, 密码:Shadowrocket
+
+[MITM]
+enable=true
+ca-passphrase={{{密码}}}
+ca-p12={{{内容}}}

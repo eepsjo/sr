@@ -1,0 +1,9 @@
+#!name=[e] lxns-mai
+#!desc=落雪查分器 - 节点：http://cHJveHkubWFpbWFpLmx4bnMubmV0OjgwODA#落雪
+
+[Rule]
+DOMAIN,tgk-wcaime.wahlap.com,落雪
+
+[URL Rewrite]
+^http:\/\/wc\.wahlap\.net\/sega\/music\/select\/play\.html$ https://maimai.lxns.net/api/v0/chunithm/wechat/auth 302
+^http:\/\/wc\.wahlap\.net\/sega\/music\/select\/store\.html$ https://maimai.lxns.net/api/v0/maimai/wechat/auth 302
