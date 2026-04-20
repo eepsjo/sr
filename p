@@ -1,5 +1,5 @@
 [General]
-# 260412a
+# 260420a
 bypass-system = true
 private-ip-answer = true
 skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com
@@ -7,6 +7,7 @@ tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 17
 icmp-auto-reply = true
 
 [Rule]
+AND,((PROTOCOL,UDP),(DST-PORT,443)),REJECT
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d,DIRECT
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,PROXY
