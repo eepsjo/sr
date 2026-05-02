@@ -8,10 +8,10 @@ icmp-auto-reply = true
 
 [Rule]
 AND,((PROTOCOL,UDP),(DST-PORT,443)),REJECT
-DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d,DIRECT
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,PROXY
+DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/direct.txt,DIRECT
 RULE-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/cncidr.txt,DIRECT,no-resolve
 FINAL,PROXY
