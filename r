@@ -1,5 +1,5 @@
 [General]
-# 260502a
+# 260502b
 bypass-system = true
 private-ip-answer = true
 skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com
