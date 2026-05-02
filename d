@@ -7,6 +7,8 @@ tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 17
 icmp-auto-reply = true
 
 [Rule]
+DOMAIN,apsd.apple.com,PROXY
+DOMAIN-SUFFIX,push.apple.com,PROXY
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,PROXY
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d,DIRECT
