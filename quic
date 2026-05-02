@@ -1,0 +1,5 @@
+#!name=[e] quic
+#!desc=屏蔽 UDP:443
+
+[Rule]
+AND,((PROTOCOL,UDP),(DST-PORT,443)),REJECT
