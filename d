@@ -1,5 +1,5 @@
 [General]
-# 260502f
+# 260503a
 bypass-system = true
 private-ip-answer = true
 skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com
@@ -8,12 +8,10 @@ icmp-auto-reply = true
 block-quic = all-proxy
 
 [Rule]
-DOMAIN,apsd.apple.com,PROXY
-DOMAIN-SUFFIX,push.apple.com,PROXY
-RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT
+DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT,pre-matching
+RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT,pre-matching
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,PROXY
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d,DIRECT
-DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/tld-not-cn.txt,PROXY
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/gfw.txt,PROXY
 FINAL,DIRECT
