@@ -1,6 +1,5 @@
 #!name=[e] apns-ez
-#!desc=APNs 代理 - 精简版，有点弱
+#!desc=APNs 代理 - 精简版
 
 [Rule]
-DOMAIN,apsd.apple.com,PROXY
 DOMAIN-SUFFIX,push.apple.com,PROXY
