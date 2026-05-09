@@ -1,5 +1,5 @@
 #!name=[e] apns
-#!desc=编辑参数
+#!desc=APNs 代理 - 编辑参数
 #!arguments=代理:PROXY
 #!arguments-desc=填入节点名称或代理分组名称指定分流\n\n避免切换配置时打断 APNs 长连接
 
