@@ -1,7 +1,7 @@
 #!name=[e] talkatone
 #!desc=编辑参数
 #!arguments=质量检测:PROXY, 代理:PROXY
-#!arguments-desc=分流代理策略\n\n· 支持填入节点名称或代理分组名称指定分流\n\n· “质量检测”需要特定节点代理，如家宽\n\n⚠不要长时间使用本模块，因为有部分直连规则会通过 STUN 泄露真实 IP 地址
+#!arguments-desc=填入节点名称或代理分组名称指定分流\n\n· “质量检测”需要特定节点代理，如家宽\n\n⚠不要长时间使用本模块，因为有部分直连规则会通过 STUN 泄露真实 IP 地址
 
 [Rule]
 DOMAIN-WILDCARD,relay-*.tktn.be,{{{质量检测}}}
