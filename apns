@@ -1,16 +1,19 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=代理:PROXY
-#!arguments-desc=填入节点名称或代理分组名称指定分流\n\n避免切换配置时打断 APNs 长连接
+#!arguments=代理:"PROXY,DIRECT",精简模式:[false,true]
+#!arguments-desc=代理：由于使用 fallback，可填写多个节点/代理分组名称，用英文逗号分隔（如：稳定节点,直连回落）\n\n精简模式：默认关闭，开启后 APNs 服务相关 IP 段将不走代理，仅代理 +.push.apple.com 域名
+
+[Proxy Group]
+APNS = fallback,{{{代理}}},{{{回落}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
 
 [Rule]
-DOMAIN-SUFFIX,push.apple.com,{{{代理}}}
-IP-CIDR,17.249.0.0/16,{{{代理}}},no-resolve
-IP-CIDR,17.252.0.0/16,{{{代理}}},no-resolve
-IP-CIDR,17.57.144.0/22,{{{代理}}},no-resolve
-IP-CIDR,17.188.128.0/18,{{{代理}}},no-resolve
-IP-CIDR,17.188.20.0/23,{{{代理}}},no-resolve
-IP-CIDR,2620:149:a44::/48,{{{代理}}},no-resolve
-IP-CIDR,2403:300:a42::/48,{{{代理}}},no-resolve
-IP-CIDR,2403:300:a51::/48,{{{代理}}},no-resolve
-IP-CIDR,2a01:b740:a42::/48,{{{代理}}},no-resolve
+DOMAIN-SUFFIX,push.apple.com,APNS
+IP-CIDR,17.249.0.0/16,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,17.252.0.0/16,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,17.57.144.0/22,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,17.188.128.0/18,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,17.188.20.0/23,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,2620:149:a44::/48,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,2403:300:a42::/48,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,2403:300:a51::/48,{{精简模式?APNS:DIRECT}},no-resolve
+IP-CIDR,2a01:b740:a42::/48,{{精简模式?APNS:DIRECT}},no-resolve
