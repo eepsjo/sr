@@ -1,10 +1,10 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=代理:"PROXY,DIRECT",精简模式:[false,true]
-#!arguments-desc=代理：由于使用 fallback，可填写多个节点/代理分组名称，用英文逗号分隔（如：稳定节点,直连回落）\n\n精简模式：默认关闭，开启后 APNs 服务相关 IP 段将不走代理，仅代理 +.push.apple.com 域名
+#!arguments=回落代理:"PROXY,DIRECT",精简模式:[false,true]
+#!arguments-desc=回落代理：可填写多个节点/代理分组名称，用英文逗号分隔（如：稳定节点,直连回落）\n\n精简模式：默认关闭，开启后 APNs 服务相关 IP 段将不走代理，仅代理 +.push.apple.com 域名
 
 [Proxy Group]
-APNS = fallback,{{{代理}}},{{{回落}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
+APNS = fallback,{{{回落代理}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
 
 [Rule]
 DOMAIN-SUFFIX,push.apple.com,APNS
