@@ -1,10 +1,12 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=回落代理:"PROXY,DIRECT",精简模式:"APNS"
-#!arguments-desc=回落代理：可填写多个节点/代理分组名称，用英文逗号分隔\n\n精简模式：默认关闭，填入 DIRECT 开启。适用于 Wi-Fi 环境
+#!arguments=回落代理:"PROXY,DIRECT",精简模式:"false"
+#!arguments-desc=回落代理：可填写多个节点/代理分组名称，用英文逗号分隔\n\n精简模式：适用于纯 Wi-Fi 环境
 
 [Proxy Group]
 APNS = fallback,{{{回落代理}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
+true = select,DIRECT
+false = select,APNS
 
 [Rule]
 DOMAIN-SUFFIX,push.apple.com,APNS
