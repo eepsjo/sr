@@ -1,29 +1,21 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=apnS:"PROXY,DIRECT",gateway.icloud.com:"true",time.apple.com:"true",fpinit.itunes.apple.com:"true",+.push.apple.com:"true",IP:"true"
-#!arguments-desc=TESTING
+#!arguments=apnS:"PROXY,DIRECT",init-?01st.push.apple.com:"true",+.push.apple.com:"true",IPs:"true"
+#!arguments-desc=https://eepsjo.github.io/Swill/技/26/11.箭箭火复活%20APNs/
 [Proxy Group]
-apnS = fallback,{{{apnS}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
 true = select,apnS
 false = select,DIRECT
+apnS = fallback,{{{apnS}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
 
 [Rule]
-DOMAIN,gateway.icloud.com,{{{gateway.icloud.com}}}
-#
-DOMAIN,time.apple.com,{{{time.apple.com}}}
-#
-DOMAIN,fpinit.itunes.apple.com,{{{fpinit.itunes.apple.com}}}
-#
-DOMAIN-SUFFIX,init-p01st.push.apple.com,DIRECT
-DOMAIN-SUFFIX,init-s01st.push.apple.com,DIRECT
+DOMAIN-WILDCARD,init-?01st.push.apple.com,{{{init-?01st.push.apple.com}}}
 DOMAIN-SUFFIX,push.apple.com,{{{+.push.apple.com}}}
-#
-IP-CIDR,17.249.0.0/16,{{{IP}}},no-resolve
-IP-CIDR,17.252.0.0/16,{{{IP}}},no-resolve
-IP-CIDR,17.57.144.0/22,{{{IP}}},no-resolve
-IP-CIDR,17.188.128.0/18,{{{IP}}},no-resolve
-IP-CIDR,17.188.20.0/23,{{{IP}}},no-resolve
-IP-CIDR,2620:149:a44::/48,{{{IP}}},no-resolve
-IP-CIDR,2403:300:a42::/48,{{{IP}}},no-resolve
-IP-CIDR,2403:300:a51::/48,{{{IP}}},no-resolve
-IP-CIDR,2a01:b740:a42::/48,{{{IP}}},no-resolve
+IP-CIDR,17.249.0.0/16,{{{IPs}}},no-resolve
+IP-CIDR,17.252.0.0/16,{{{IPs}}},no-resolve
+IP-CIDR,17.57.144.0/22,{{{IPs}}},no-resolve
+IP-CIDR,17.188.128.0/18,{{{IPs}}},no-resolve
+IP-CIDR,17.188.20.0/23,{{{IPs}}},no-resolve
+IP-CIDR,2620:149:a44::/48,{{{IPs}}},no-resolve
+IP-CIDR,2403:300:a42::/48,{{{IPs}}},no-resolve
+IP-CIDR,2403:300:a51::/48,{{{IPs}}},no-resolve
+IP-CIDR,2a01:b740:a42::/48,{{{IPs}}},no-resolve
