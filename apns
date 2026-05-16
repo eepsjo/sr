@@ -1,21 +1,21 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=apnS:"PROXY,DIRECT",Ruleset-D:"false",+.push.apple.com:"true",IP:"false"
-#!arguments-desc=https://eepsjo.github.io/Swill/%E6%8A%80/26/11.%E7%AE%AD%E7%AE%AD%E7%81%AB%E5%A4%8D%E6%B4%BB%20APNs/
-
+#!arguments=apnS:"PROXY,DIRECT",gateway.icloud.com:"true",time.apple.com:"true",fpinit.itunes.apple.com:"true",+.push.apple.com:"true",IP:"true"
+#!arguments-desc=TESTING
 [Proxy Group]
-APNS = fallback,{{{apnS}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
-true = select,APNS
+apnS = fallback,{{{apnS}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
+true = select,apnS
 false = select,DIRECT
 
 [Rule]
-DOMAIN-SUFFIX,init-p01md-lb.push-apple.com.akadns.net,{{{Ruleset-D}}}
-DOMAIN-SUFFIX,init-p01md.apple.com,{{{Ruleset-D}}}
-DOMAIN-SUFFIX,init-p01st-lb.push-apple.com.akadns.net,{{{Ruleset-D}}}
-DOMAIN-SUFFIX,init-p01st.push.apple.com,{{{Ruleset-D}}}
-DOMAIN-SUFFIX,init-s01st-lb.push-apple.com.akadns.net,{{{Ruleset-D}}}
-DOMAIN-SUFFIX,init-s01st.push.apple.com,{{{Ruleset-D}}}
+DOMAIN,gateway.icloud.com,{{{gateway.icloud.com}}}
 #
+DOMAIN,time.apple.com,{{{time.apple.com}}}
+#
+DOMAIN,fpinit.itunes.apple.com,{{{fpinit.itunes.apple.com}}}
+#
+DOMAIN-SUFFIX,init-p01st.push.apple.com,DIRECT
+DOMAIN-SUFFIX,init-s01st.push.apple.com,DIRECT
 DOMAIN-SUFFIX,push.apple.com,{{{+.push.apple.com}}}
 #
 IP-CIDR,17.249.0.0/16,{{{IP}}},no-resolve
