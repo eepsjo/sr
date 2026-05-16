@@ -16,7 +16,7 @@ DOMAIN-SUFFIX,init-p01st.push.apple.com,{{{Ruleset-D}}}
 DOMAIN-SUFFIX,init-s01st-lb.push-apple.com.akadns.net,{{{Ruleset-D}}}
 DOMAIN-SUFFIX,init-s01st.push.apple.com,{{{Ruleset-D}}}
 #
-DOMAIN-SUFFIX,push.apple.com,APNS,{{{+.push.apple.com}}}
+DOMAIN-SUFFIX,push.apple.com,{{{+.push.apple.com}}}
 #
 IP-CIDR,17.249.0.0/16,{{{IP}}},no-resolve
 IP-CIDR,17.252.0.0/16,{{{IP}}},no-resolve
