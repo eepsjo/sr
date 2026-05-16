@@ -1,10 +1,10 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=fallback:"PROXY,DIRECT",Ruleset-D:"false",+.push.apple.com:"true",IP:"false"
+#!arguments=apnS:"PROXY,DIRECT",Ruleset-D:"false",+.push.apple.com:"true",IP:"false"
 #!arguments-desc=https://eepsjo.github.io/Swill/%E6%8A%80/26/11.%E7%AE%AD%E7%AE%AD%E7%81%AB%E5%A4%8D%E6%B4%BB%20APNs/
 
 [Proxy Group]
-APNS = fallback,{{{回落代理组}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
+APNS = fallback,{{{apnS}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
 true = select,APNS
 false = select,DIRECT
 
