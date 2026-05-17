@@ -1,6 +1,6 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=apnS:"PROXY,DIRECT",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPall:"true",IPs:"true"
+#!arguments=apnS:"PROXY,DIRECT",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPall:"true",IPs:"false"
 #!arguments-desc=详细说明请移步 https://eepsjo.github.io/Swill/技/26/11.箭箭火复活%20APNs/
 [Proxy Group]
 false = select,DIRECT
