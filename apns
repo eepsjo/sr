@@ -1,6 +1,9 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=apnS:"PROXY,DIRECT",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPall:"true",IPs:"false"
+#!arguments=apnS:"PROXY,DIRECT",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPall:"true"
+#
+# ,IPs:"false"
+#
 #!arguments-desc=详细说明请移步 https://eepsjo.github.io/Swill/技/26/11.箭箭火复活%20APNs/
 [Proxy Group]
 false = select,DIRECT
@@ -11,12 +14,12 @@ apnS = fallback,{{{apnS}}},timeout=5,interval=600,url=http://www.gstatic.com/gen
 DOMAIN-WILDCARD,init-?01st.push.apple.com,{{{init-?01st.push.apple.com}}}
 DOMAIN-SUFFIX,push.apple.com,{{{+.push.apple.com}}}
 IP-CIDR,17.0.0.0/8,{{{IPall}}},no-resolve
-IP-CIDR,17.249.0.0/16,{{{IPs}}},no-resolve
-IP-CIDR,17.252.0.0/16,{{{IPs}}},no-resolve
-IP-CIDR,17.57.144.0/22,{{{IPs}}},no-resolve
-IP-CIDR,17.188.128.0/18,{{{IPs}}},no-resolve
-IP-CIDR,17.188.20.0/23,{{{IPs}}},no-resolve
-IP-CIDR,2620:149:a44::/48,{{{IPs}}},no-resolve
-IP-CIDR,2403:300:a42::/48,{{{IPs}}},no-resolve
-IP-CIDR,2403:300:a51::/48,{{{IPs}}},no-resolve
-IP-CIDR,2a01:b740:a42::/48,{{{IPs}}},no-resolve
+# IP-CIDR,17.249.0.0/16,{{{IPs}}},no-resolve
+# IP-CIDR,17.252.0.0/16,{{{IPs}}},no-resolve
+# IP-CIDR,17.57.144.0/22,{{{IPs}}},no-resolve
+# IP-CIDR,17.188.128.0/18,{{{IPs}}},no-resolve
+# IP-CIDR,17.188.20.0/23,{{{IPs}}},no-resolve
+# IP-CIDR,2620:149:a44::/48,{{{IPs}}},no-resolve
+# IP-CIDR,2403:300:a42::/48,{{{IPs}}},no-resolve
+# IP-CIDR,2403:300:a51::/48,{{{IPs}}},no-resolve
+# IP-CIDR,2a01:b740:a42::/48,{{{IPs}}},no-resolve
