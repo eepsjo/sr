@@ -1,12 +1,13 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=apnS:"PROXY,DIRECT",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPs:"true"
-#!arguments-desc=详细说明请移步 https://eepsjo.github.io/Swill/技/26/11.箭箭火复活%20APNs/
+#!arguments=mode:"fallback",url-test:"PROXY",fallback:"DIRECT",interval:"600",tolerance:"66",timeout:"3",url="http://www.gstatic.com/generate_204",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPs:"true"
+#!arguments-desc=https://eepsjo.github.io/Swill/技/26/11.箭箭火复活%20APNs/
 
 [Proxy Group]
 false = select,DIRECT
-true = select,apnS
-apnS = fallback,{{{apnS}}},timeout=5,interval=600,url=http://www.gstatic.com/generate_204
+true = select,{{{mode}}}
+url-test = url-test,{{{url-test}}},interval={{{interval}}},tolerance={{{tolerance}}},timeout={{{timeout}}},url={{{url}}}
+fallback = fallback,url-test,{{{fallback}}},interval={{{interval}}},timeout={{{timeout}}},url={{{url}}}
 
 [Rule]
 DOMAIN-WILDCARD,init-?01st.push.apple.com,{{{init-?01st.push.apple.com}}}
