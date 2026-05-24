@@ -1,8 +1,9 @@
 #!name=[e] ca
 #!desc=证书 - 编辑参数
-#!arguments=内容:此处粘贴有效的证书内容, 密码:Shadowrocket
+#!arguments=MitM with HTTP/2:true,内容:此处粘贴有效的证书内容,密码:Shadowrocket
 
 [MITM]
 enable=true
-ca-passphrase={{{密码}}}
+h2={{{MitM with HTTP/2}}}
 ca-p12={{{内容}}}
+ca-passphrase={{{密码}}}
