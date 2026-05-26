@@ -1,5 +1,0 @@
-#!name=[e] apns-js
-#!desc=【测试中】利用定时心跳包刷新苹果云端 APNs 区域标记，从而在直连状态下穿透针对 Telegram/X 的通知拦截
-
-[Script]
-apns-keep = type=cron,cronexpr="0 */20 * * * *",script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/apns.js,script-update-interval=0,timeout=10
