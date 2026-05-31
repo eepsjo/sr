@@ -10,6 +10,7 @@ block-quic = all-proxy
 DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT,pre-matching
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT,pre-matching
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,PROXY
+RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d,DIRECT
 FINAL,DIRECT
 
 [Host]
