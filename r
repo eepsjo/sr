@@ -1,5 +1,5 @@
 [General]
-# 260604c
+# 260604d
 tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32, 239.255.255.250/32
 private-ip-answer = true
 icmp-auto-reply = true
@@ -10,7 +10,7 @@ block-quic = all-proxy
 DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT,pre-matching
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT,pre-matching
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d,DIRECT
-RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,MINI
+RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,PROXY
 FINAL,DIRECT
 
 [Host]
