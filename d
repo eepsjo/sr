@@ -1,18 +1,22 @@
 [General]
-# 260525a
+# 260604a
 tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32, 239.255.255.250/32
 private-ip-answer = true
 icmp-auto-reply = true
 compatibility-mode = 3
 block-quic = all-proxy
 
+[Proxy Group]
+MINI = select,PROXY
+DEFAULT = select,PROXY
+
 [Rule]
 DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT,pre-matching
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/r,REJECT,pre-matching
-RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,PROXY
+RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/p,MINI
 RULE-SET,https://raw.githubusercontent.com/eepsjo/0/refs/heads/0/d,DIRECT
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/tld-not-cn.txt,PROXY
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/gfw.txt,PROXY
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/tld-not-cn.txt,DEFAULT
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/refs/heads/release/gfw.txt,DEFAULT
 FINAL,DIRECT
 
 [Host]
