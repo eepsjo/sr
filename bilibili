@@ -19,7 +19,7 @@ bilibili.helper.teenager = type=http-response,pattern=^https:\/\/grpc\.biliapi\.
 bilibili.helper.v1.view = type=http-response,pattern=^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|ViewProgress)$,requires-body=1,binary-body-mode=1,max-size=-1,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/bilibili.js
 bilibili.helper.mainList = type=http-response,pattern=^https:\/\/grpc\.biliapi\.net\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList,requires-body=1,binary-body-mode=1,max-size=-1,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/bilibili.js
 bilibili.helper.searchAll = type=http-response,pattern=^https:\/\/grpc\.biliapi\.net\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$,requires-body=1,binary-body-mode=1,max-size=-1,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/bilibili.js
-bilibili.helper.dynAll = type=http-response,pattern=^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$,requires-body=1,binary-body-mode=1,max-size=-1,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/bilibili.js[Script]
+bilibili.helper.dynAll = type=http-response,pattern=^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$,requires-body=1,binary-body-mode=1,max-size=-1,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/bilibili.js
 bili4k = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/bili4k.js,script-update-interval=0
 
 [Map Local]
