@@ -1,7 +1,7 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
 #!arguments=mode:"fallback",url-test:"PROXY",fallback:"DIRECT",interval:"600",tolerance:"66",timeout:"3",url:"http://www.gstatic.com/generate_204",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPs:"true"
-#!arguments-desc=https://eepsjo.github.io/Swill/技/26/11.箭箭火复活%20APNs/
+#!arguments-desc=https://eepsjo.github.io/Swill/%E5%99%A8/26/11.%E7%AE%AD%E7%AE%AD%E7%81%AB%E6%A8%A1%E5%9D%97%E5%A4%8D%E6%B4%BB%20APNs%20%E7%9A%84%E5%B0%9D%E8%AF%95/
 
 [Proxy Group]
 false = select,DIRECT
