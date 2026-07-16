@@ -1,0 +1,14 @@
+#!name=[e] tailscale
+#!desc=连接 tailscale 需要的规则
+
+[Rule]
+# IP-CIDR,100.64.0.0/10,tailscale,no-resolve
+# DOMAIN-SUFFIX,ts.net,tailscale
+DOMAIN-SUFFIX,tailscale.com,DIRECT
+# DOMAIN-WILDCARD,derp*.tailscale.com,DIRECT
+# DOMAIN,controlplane.tailscale.com,DIRECT
+# DOMAIN,login.tailscale.com,DIRECT
+# DOMAIN,ipn.tailscale.com,DIRECT
+# DOMAIN,pkgs.tailscale.com,DIRECT
+# DOMAIN,meta.tailscale.com,DIRECT
+# DOMAIN,log.tailscale.com,DIRECT
