@@ -1,16 +1,15 @@
 #!name=[e] apns
 #!desc=APNs 代理 - 编辑参数
-#!arguments=mode:"fallback",url-test:"PROXY",fallback:"DIRECT",interval:"600",tolerance:"66",timeout:"3",url:"http://www.gstatic.com/generate_204",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPs:"true"
-#!arguments-desc=https://eepsjo.github.io/Swill/%E5%99%A8/26/11.%E7%AE%AD%E7%AE%AD%E7%81%AB%E6%A8%A1%E5%9D%97%E5%A4%8D%E6%B4%BB%20APNs%20%E7%9A%84%E5%B0%9D%E8%AF%95/
+#!arguments=node:"PROXY",init-?01st.push.apple.com:"false",+.push.apple.com:"true",IPs:"true"
+#!arguments-desc=使用前先阅读：https://eepsjo.github.io/Swill/器/26/11.箭箭火模块复活%20APNs%20的尝试/
 
 [Proxy Group]
 false = select,DIRECT
-true = select,{{{mode}}}
-url-test = url-test,{{{url-test}}},interval={{{interval}}},tolerance={{{tolerance}}},timeout={{{timeout}}},url={{{url}}}
-fallback = fallback,url-test,{{{fallback}}},interval={{{interval}}},timeout={{{timeout}}},url={{{url}}}
+true = fallback,node,DIRECT
 
 [Rule]
-DOMAIN-WILDCARD,init-?01st.push.apple.com,{{{init-?01st.push.apple.com}}}
+DOMAIN,init-p01st.push.apple.com,{{{init-?01st.push.apple.com}}}
+DOMAIN,init-s01st.push.apple.com,{{{init-?01st.push.apple.com}}}
 DOMAIN-SUFFIX,push.apple.com,{{{+.push.apple.com}}}
 IP-CIDR,17.249.0.0/16,{{{IPs}}},no-resolve
 IP-CIDR,17.252.0.0/16,{{{IPs}}},no-resolve
