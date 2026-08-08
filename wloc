@@ -2,7 +2,7 @@
 #!desc=改定位
 
 [Script]
-Apple WLOC = type=http-response,pattern=^https?:\/\/gs-loc(-cn)?\.apple\.com\/clls\/wloc,requires-body=1,binary-body-mode=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/wloc.js,argument=longitude=12.34567&latitude=12.34567&accuracy=25&logLevel=off
+Apple WLOC = type=http-response,pattern=^https?:\/\/gs-loc(-cn)?\.apple\.com\/clls\/wloc,requires-body=1,binary-body-mode=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/wloc.js,argument=longitude=113.94114&latitude=22.544577&accuracy=25&logLevel=off
 WLOC Settings = type=http-request,pattern=^https?:\/\/gs-loc(-cn)?\.apple\.com\/wloc-settings\/save,requires-body=0,max-size=0,timeout=10,script-path=https://raw.githubusercontent.com/eepsjo/s/refs/heads/m/js/wloc-settings.js
 
 [MITM]
