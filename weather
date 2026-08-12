@@ -1,0 +1,19 @@
+#!name=[e] weather
+#!desc=解锁天气功能 - iOS 18+
+#!arguments=endpoint:weatherkit.pages.dev
+#!arguments-desc=参数非必要不修改\nhttps://raw.githubusercontent.com/NSRingo/WeatherKit/refs/heads/main/modules/iRingo.WeatherKit.Rewrite.srmodule
+
+[Rule]
+DOMAIN,tether.edge.apple,REJECT
+DOMAIN-SUFFIX,tthr.apple.com,REJECT
+
+[URL Rewrite]
+# WeatherKit.api.v1.availability.response
+^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ https://{{{endpoint}}}/api/v1/availability/ header
+# WeatherKit.api.v2.weather.response
+^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ https://{{{endpoint}}}/api/v2/weather/ header
+# WeatherKit.api.v1.weatherAlerts.response
+^https?:\/\/weatherkit\.apple\.com\/api\/v1\/weatherAlerts\?([^#]*&ids=-?[0-9]+(?:\.[0-9]+)?,-?[0-9]+(?:\.[0-9]+)?(?:&[^#]*)?)$ https://{{{endpoint}}}/api/v1/weatherAlerts?$1 header
+
+[MITM]
+hostname = %APPEND% weatherkit.apple.com
