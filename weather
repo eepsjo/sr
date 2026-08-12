@@ -1,5 +1,5 @@
 #!name=[e] weather
-#!desc=解锁天气功能 - iOS 18+
+#!desc=改天气源
 #!arguments=endpoint:weatherkit.pages.dev
 #!arguments-desc=参数非必要不修改\nhttps://raw.githubusercontent.com/NSRingo/WeatherKit/refs/heads/main/modules/iRingo.WeatherKit.Rewrite.srmodule
 
