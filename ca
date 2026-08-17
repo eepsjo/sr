@@ -1,4 +1,4 @@
-#!name=[e] ca
+#!name=[github] ca
 #!desc=【编辑参数】证书
 #!arguments=MitM over HTTP/2:true,内容:此处粘贴有效的证书内容,密码:Shadowrocket
 

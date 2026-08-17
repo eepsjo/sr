@@ -1,4 +1,4 @@
-#!name=[e] talkatone
+#!name=[github] talkatone
 #!desc=【编辑参数】不能用于注册
 #!arguments=质量检测:PROXY,代理:PROXY
 #!arguments-desc=填入节点/代理分组名称指定分流\n\n“质量检测”需要 IP 质量好的美国节点

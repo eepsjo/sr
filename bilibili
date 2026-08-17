@@ -1,4 +1,4 @@
-#!name=[e] bilibili
+#!name=[github] bilibili
 #!desc=去广告 - 需要 MitM over HTTP/2
 #!arguments=isp:cm,netinfo:CAIQBBoGbW9iaWxl
 #!arguments-desc=参数非必要不修改
